@@ -1,0 +1,115 @@
+@import url("https://fonts.cdnfonts.com/css/li-ador-noirrit?styles=87152");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-color: #ffffff;
+  --primary-color: #a90047;
+  --secondary-color: #8b1446;
+  --text-color: #ffffff;
+  --primary-light: #a9004788;
+  --menu-color: #ff0000;
+}
+
+.hero-section .slick-dots {
+  bottom: 10px;
+}
+body{
+ background-image: url("../src/assets/images/background.png");
+
+}
+@layer base {
+  @font-face {
+    font-family: "AdorModernv1";
+    font-weight: 400;
+    font-variation-settings: "wght", 400;
+    font-style: normal;
+    src: url(./assets/font/LiAdorNoirrit/LiAdorNoirritVRf8a5.woff)
+        format("woff"),
+      url(./assets/font/LiAdorNoirrit/LiAdorNoirritVRf8a5.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: "AdorModernv2";
+    font-weight: 400;
+    font-style: normal;
+    src: url(./assets/font/LiAdorNoirrit/LiAdorNoirritVRf8a5.woff2)
+        format("woff2"),
+      url(./assets/font/LiAdorNoirrit/LiAdorNoirritVRf8a5.woff) format("woff");
+  }
+  @font-face {
+    font-family: "AdorModernv";
+    src: url(./assets/font/Ador/modern/LiAdorNoirritVR-VF.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: "Adorv1";
+    src: url(./assets/font/Ador/v1/Li\ Ador\ Noirrit\ A-V1\ Regular.ttf)
+      format("ttf");
+  }
+  @font-face {
+    font-family: "Adorv2";
+    src: url(./assets/font/Ador/v2/Li\ Ador\ Noirrit\ A-V2\ Regular.ttf)
+      format("ttf");
+  }
+  @font-face {
+    font-family: "Ador";
+    src: url(./assets/font/Ador/unicode/Li\ Ador\ Noirrit\ Regular.ttf)
+      format("ttf");
+  }
+  @font-face {
+    font-family: "AdorSemiBold";
+    src: url(./assets/font/Ador/unicode/Li\ Ador\ Noirrit\ SemiBold.ttf.ttf)
+      format("ttf");
+  }
+  @font-face {
+    font-family: "AdorBold";
+    src: url(./assets/font/Ador/unicode/Li\ Ador\ Noirrit\ Bold.ttf.ttf)
+      format("ttf");
+  }
+
+  /* poppins font */
+  @font-face {
+    font-family: "poppins";
+    font-style: normal;
+    font-weight: 300;
+    src: url("./assets/font/poppins/Poppins-Light.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "poppins";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./assets/font/poppins/Poppins-Regular.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "poppins";
+    font-style: normal;
+    font-weight: 500;
+    src: url("./assets/font/poppins/Poppins-Medium.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "poppins";
+    font-style: normal;
+    font-weight: 600;
+    src: url("./assets/font/poppins/Poppins-SemiBold.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "poppins";
+    font-style: normal;
+    font-weight: 700;
+    src: url("./assets/font/poppins/Poppins-Bold.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "poppins";
+    font-style: normal;
+    font-weight: 800;
+    src: url("./assets/font/poppins/Poppins-ExtraBold.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "poppins";
+    font-style: normal;
+    font-weight: 900;
+    src: url("./assets/font/poppins/Poppins-Black.ttf") format("truetype");
+  }
+}

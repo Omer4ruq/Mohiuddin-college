@@ -1,0 +1,12 @@
+.gallery__slider .slick-slide > div{
+    height: 100%;
+}
+.gallery__slider .slick-list{
+    height: 100%;
+}
+.gallery__slider .slick-track{
+    height: 100%;
+}
+.gallery__slider .slick-dots{
+    bottom: 10px;
+}

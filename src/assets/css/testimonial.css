@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Ador";
+  src: url(../../assets/font/AdorNoirritWeb.otf) format("otf");
+}
+/* * {
+  font-family: "Ador";
+} */
+.testimonial__slider .custom_shadow {
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.slick-dots li button::before {
+  font-size: 12px;
+  opacity: 1;
+  color: transparent;
+  width: 11px;
+  height: 11px;
+  line-height: 11px;
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+}
+
+.slick-dots li.slick-active button::before {
+  font-size: 12px;
+  opacity: 1;
+  color: var(--primary-color);
+  width: 12px;
+  height: 12px;
+  line-height: 12px;
+  border: none;
+}
+
+.slick-dots li {
+  width: 12px;
+  height: 12px;
+}
+.slick-dots li button {
+  width: 12px;
+  height: 12px;
+}
+
+@media only screen and (max-width: 575px) {
+  .slt__single:first-of-type {
+    flex-direction: column;
+  }
+
+  .slider__top {
+    flex-direction: column;
+  }
+  .slt__single:last-of-type > div {
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .testimonial__slider {
+    text-align: center;
+  }
+}
