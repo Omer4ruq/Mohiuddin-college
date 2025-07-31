@@ -220,10 +220,10 @@ const menuData = [
           //   title: "Exam Admit Card",
           //   link: "/exam-admit-card",
           // },
-          {
-            title: "Exam Result",
-            link: "/exam-result",
-          },
+          // {
+          //   title: "Exam Result",
+          //   link: "/exam-result",
+          // },
         ]
       },
       {
