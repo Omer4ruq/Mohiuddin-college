@@ -13,7 +13,7 @@ export default function OurPride() {
         component={<QuizCompetition />}
       /> */}
       <Box
-        heading="Our Allumni"
+        heading="Our Alumni"
         icon={images.fullStar}
         colSpan="col-span-1"
         component={<QuoteSlider />}

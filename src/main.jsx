@@ -57,6 +57,10 @@ import EMMS from "./components/pages/EMMS";
 import RESA from "./components/pages/RESA";
 import Publications from "./components/pages/Publications";
 import Career from "./components/pages/Career";
+import CurrentHead from "./components/pages/CurrentHead";
+import StaffList from "./components/pages/StaffList";
+import ExTeachersList from "./components/pages/ExTeachersList";
+import ExStaffList from "./components/pages/ExStaffList";
 
 const router = createBrowserRouter([
   {
@@ -200,9 +204,29 @@ const router = createBrowserRouter([
         path: "/admission-page",
         element: <AdmissionPage />,
       },
-      {
+      // {
+      //   path: "/current-principal",
+      //   element: <CurrentPrincipal></CurrentPrincipal>,
+      // },
+         {
         path: "/current-principal",
-        element: <CurrentPrincipal></CurrentPrincipal>,
+        element: <CurrentHead></CurrentHead>,
+      },
+      {
+        path: "/current-teachers-list",
+        element: <TeachersList></TeachersList>,
+      },
+      {
+        path: "/current-staffs-list",
+        element: <StaffList></StaffList>,
+      },
+       {
+        path: "/ex-teachers-list",
+        element: <ExTeachersList></ExTeachersList>,
+      },
+       {
+        path: "/ex-staffs-list",
+        element: <ExStaffList></ExStaffList>,
       },
       {
         path: "/ex-principals",
