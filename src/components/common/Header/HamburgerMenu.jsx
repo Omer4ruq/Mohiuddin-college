@@ -1,11 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // এই লাইন যোগ করুন
 import { FaChevronDown } from "react-icons/fa6";
 
 // Mobile Menu Item Component
 const HamburgerMenu = ({ menuItem, setShowNav }) => {
+  const navigate = useNavigate(); // এই লাইন যোগ করুন
+
   const handleClick = () => {
     if (menuItem.link) {
-      console.log(`Navigate to: ${menuItem.link}`);
+      navigate(menuItem.link); // console.log এর বদলে navigate ব্যবহার করুন
       setShowNav(false);
     }
   };
@@ -35,7 +38,7 @@ const HamburgerMenu = ({ menuItem, setShowNav }) => {
                 <div
                   key={idx}
                   onClick={() => {
-                    console.log(`Navigate to: ${item.link}`);
+                    navigate(item.link); // console.log এর বদলে navigate ব্যবহার করুন
                     setShowNav(false);
                   }}
                   className="block text-sm px-6 py-2 hover:bg-blue-500 hover:text-white rounded transition-all duration-200 cursor-pointer"

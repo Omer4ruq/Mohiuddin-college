@@ -1,9 +1,12 @@
-
+import head from '../../public/images/head.png'
+import founder from '../../public/images/Founder-2.jpg'
+import teacher from '../../public/images/teacher.jpg'
+import vc from '../../public/images/vc.jpg'
 
 const staffData = {
   "current_head": {
-    "name_bengali": "মোঃ আজীম-উল-হক",
-    "name_english": "Md. Azim-ul-Haq",
+    "name_bengali": "মোহাম্মাদ সাজ্জাদ হোসেন",
+    "name_english": "Md. Sajjad Hossain",
     "father_name_bengali": "মৃত: আনোয়ারুল হক",
     "father_name_english": "Late Anwarul Haque",
     "mother_name_bengali": "মৃত: হোসনেয়ারা হক",
@@ -35,8 +38,44 @@ const staffData = {
     "current_address_bengali": "গ্রাম- মঠবাড়িয়া, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
     "permanent_address_bengali": "গ্রাম- মঠবাড়িয়া, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
     "index_pds": "435345",
-    "image_url": null
+    "image_url": head
   },
+  "founder": {
+    "name_bengali": "মোহাম্মদ আবদুল করিম",
+    "name_english": "Md. Abdul Karim",
+    "father_name_bengali": "মৃত: আবদুর রহমান",
+    "father_name_english": "Late Abdur Rahman",
+    "mother_name_bengali": "মৃত: রওশন আরা",
+    "mother_name_english": "Late Rowshan Ara",
+    "spouse_name_bengali": "সাবিনা ইয়াসমিন",
+    "spouse_name_english": "Sabina Yasmin",
+    "dob_bengali": "১৫-০৮-১৯৪৫ ইং",
+    "dob_english": "15-08-1945",
+    "religion_bengali": "ইসলাম",
+    "religion_english": "Islam",
+    "marital_status_bengali": "বিবাহিত",
+    "marital_status_english": "Married",
+    "qualification_bengali": "এম.এ. আরবি সাহিত্য",
+    "qualification_english": "M.A. Arabic Literature",
+    "title_bengali": "প্রতিষ্ঠাতা",
+    "title_english": "Founder",
+    "subject_bengali": "প্রশাসনিক",
+    "subject_english": "Administrative",
+    "mobile": "01711-123456",
+    "nationality_bengali": "জন্মসূত্রে বাংলাদেশী",
+    "nationality_english": "Bangladeshi by birth",
+    "nid": "1967451234567",
+    "email": "founder@example.com",
+    "blood_group": "O+",
+    "first_join_date_bengali": "০১-০১-১৯৭২ ইং",
+    "first_join_date_english": "01-01-1972",
+    "current_join_date_bengali": "০১-০১-১৯৭২ ইং",
+    "current_join_date_english": "01-01-1972",
+    "current_address_bengali": "গ্রাম- দৌলতপুর, ডাকঘর- দৌলতপুর, উপজেলা- দৌলতপুর, জেলা- কুষ্টিয়া।",
+    "permanent_address_bengali": "গ্রাম- দৌলতপুর, ডাকঘর- দৌলতপুর, উপজেলা- দৌলতপুর, জেলা- কুষ্টিয়া।",
+    "index_pds": "123456",
+    "image_url": founder
+},
   "ex_teachers": [
     {
       "serial": 1,
@@ -75,7 +114,7 @@ const staffData = {
       "current_address_bengali": "ওয়ার্ড নং-০২, মঠবাড়িয়া পৌরসভা, মঠবাড়িয়া, পিরোজপুর।",
       "permanent_address_bengali": "গ্রাম- বড় শৌলা, ডাকঘর- বড়শৌলা, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "index_pds": "409750",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 2,
@@ -114,7 +153,7 @@ const staffData = {
       "current_address_bengali": "গ্রাম- দক্ষিণ বন্দর, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর",
       "permanent_address_bengali": "গ্রাম- মাচ্চর কোয়ারপুর, ডাকঘর- ফরিদপুর, উপজেলা- ফরিদপুর সদর, জেলা- ফরিদপুর।",
       "index_pds": "409746",
-      "image_url": null
+      "image_url": teacher
     }
   ],
   "current_teachers": [
@@ -155,7 +194,7 @@ const staffData = {
       "current_address_bengali": "গ্রাম- দক্ষিণ মিঠাখালী, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "permanent_address_bengali": "গ্রাম- দক্ষিণ মিঠাখালী, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "index_pds": "617287",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 2,
@@ -194,7 +233,7 @@ const staffData = {
       "current_address_bengali": "গ্রাম- খেজুরবাড়িয়া, ডাকঘর- বড়মাছুয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "permanent_address_bengali": "গ্রাম- খেজুরবাড়িয়া, ডাকঘর- বড়মাছুয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "index_pds": "109778",
-      "image_url": null
+      "image_url": head
     },
     {
       "serial": 3,
@@ -233,7 +272,7 @@ const staffData = {
       "current_address_bengali": "গ্রাম-পশ্চিম মিঠাখালী, ডাকঘর- বিএনহাট, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "permanent_address_bengali": "গ্রাম-পশ্চিম মিঠাখালী, ডাকঘর- বিএনহাট, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "index_pds": "নাই",
-      "image_url": null
+      "image_url": founder
     },
     {
       "serial": 4,
@@ -272,7 +311,7 @@ const staffData = {
       "current_address_bengali": null,
       "permanent_address_bengali": null,
       "index_pds": "নাই",
-      "image_url": null
+      "image_url": vc
     },
     {
       "serial": 5,
@@ -311,7 +350,7 @@ const staffData = {
       "current_address_bengali": null,
       "permanent_address_bengali": null,
       "index_pds": "নাই",
-      "image_url": null
+      "image_url": head
     },
     {
       "serial": 6,
@@ -350,7 +389,7 @@ const staffData = {
       "current_address_bengali": null,
       "permanent_address_bengali": null,
       "index_pds": "3091700",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 7,
@@ -389,7 +428,7 @@ const staffData = {
       "current_address_bengali": null,
       "permanent_address_bengali": null,
       "index_pds": "3089607",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 8,
@@ -428,7 +467,7 @@ const staffData = {
       "current_address_bengali": null,
       "permanent_address_bengali": null,
       "index_pds": "3089475",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 9,
@@ -467,7 +506,7 @@ const staffData = {
       "current_address_bengali": null,
       "permanent_address_bengali": null,
       "index_pds": "3084264",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 10,
@@ -506,7 +545,7 @@ const staffData = {
       "current_address_bengali": null,
       "permanent_address_bengali": null,
       "index_pds": "3078764",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 11,
@@ -545,7 +584,7 @@ const staffData = {
       "current_address_bengali": null,
       "permanent_address_bengali": null,
       "index_pds": "3010603",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 12,
@@ -584,7 +623,7 @@ const staffData = {
       "current_address_bengali": null,
       "permanent_address_bengali": null,
       "index_pds": "439326",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 13,
@@ -623,7 +662,7 @@ const staffData = {
       "current_address_bengali": null,
       "permanent_address_bengali": null,
       "index_pds": "409756",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 14,
@@ -662,7 +701,7 @@ const staffData = {
       "current_address_bengali": null,
       "permanent_address_bengali": null,
       "index_pds": "409753",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 15,
@@ -701,7 +740,7 @@ const staffData = {
       "current_address_bengali": null,
       "permanent_address_bengali": null,
       "index_pds": "409752",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 16,
@@ -740,7 +779,7 @@ const staffData = {
       "current_address_bengali": null,
       "permanent_address_bengali": null,
       "index_pds": "409751",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 17,
@@ -779,7 +818,7 @@ const staffData = {
       "current_address_bengali": null,
       "permanent_address_bengali": null,
       "index_pds": "411032",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 18,
@@ -818,7 +857,7 @@ const staffData = {
       "current_address_bengali": null,
       "permanent_address_bengali": null,
       "index_pds": "049757",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 19,
@@ -857,7 +896,7 @@ const staffData = {
       "current_address_bengali": "গ্রাম- সবুজ নগর, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "permanent_address_bengali": "গ্রাম- সবুজ নগর, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "index_pds": "409748",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 20,
@@ -896,7 +935,7 @@ const staffData = {
       "current_address_bengali": "গ্রাম-দক্ষিণ মিঠাখালী, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "permanent_address_bengali": "গ্রাম-দক্ষিণ মিঠাখালী, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "index_pds": "409747",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 21,
@@ -935,7 +974,7 @@ const staffData = {
       "current_address_bengali": "গ্রাম- মঠবাড়িয়া, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "permanent_address_bengali": "গ্রাম- মঠবাড়িয়া, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "index_pds": "435345",
-      "image_url": null
+      "image_url": teacher
     }
   ],
   "current_staffs": [
@@ -976,7 +1015,7 @@ const staffData = {
       "current_address_bengali": "গ্রাম- আন্ধারমানিক, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "permanent_address_bengali": "গ্রাম- আন্ধারমানিক, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "index_pds": "নাই",
-      "image_url": null
+      "image_url": head
     },
     {
       "serial": 2,
@@ -1015,7 +1054,7 @@ const staffData = {
       "current_address_bengali": "গ্রাম- দক্ষিণ মিঠাখালী, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "permanent_address_bengali": "গ্রাম- দক্ষিণ মিঠাখালী, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "index_pds": "608742",
-      "image_url": null
+      "image_url": founder
     },
     {
       "serial": 3,
@@ -1054,7 +1093,7 @@ const staffData = {
       "current_address_bengali": "গ্রাম- উত্তর মিঠাখালী, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "permanent_address_bengali": "গ্রাম- উত্তর মিঠাখালী, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "index_pds": "নাই",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 4,
@@ -1093,7 +1132,7 @@ const staffData = {
       "current_address_bengali": "গ্রাম- দক্ষিণ মিঠাখালী, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "permanent_address_bengali": "গ্রাম- দক্ষিণ মিঠাখালী, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "index_pds": "3085962",
-      "image_url": null
+      "image_url": vc
     },
     {
       "serial": 5,
@@ -1132,7 +1171,7 @@ const staffData = {
       "current_address_bengali": "গ্রাম- উত্তর মিঠাখালী, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "permanent_address_bengali": "গ্রাম- উত্তর মিঠাখালী, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "index_pds": "নাই",
-      "image_url": null
+      "image_url": head
     }
   ],
   "ex_staffs": [
@@ -1173,7 +1212,7 @@ const staffData = {
       "current_address_bengali": "গ্রাম- উত্তর মিঠাখালী, ডাকঘর- মিঠাখালী, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "permanent_address_bengali": "গ্রাম- উত্তর মিঠাখালী, ডাকঘর- মিঠাখালী, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "index_pds": "608740",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 2,
@@ -1212,7 +1251,7 @@ const staffData = {
       "current_address_bengali": "গ্রাম- দক্ষিণবন্দর, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "permanent_address_bengali": "গ্রাম- দক্ষিণবন্দর, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "index_pds": "608733",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 3,
@@ -1251,7 +1290,7 @@ const staffData = {
       "current_address_bengali": "গ্রাম- দক্ষিণ মিঠাখালী, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া,জেলা- পিরোজপুর।",
       "permanent_address_bengali": "গ্রাম- দক্ষিণ মিঠাখালী, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া,জেলা- পিরোজপুর।",
       "index_pds": "608737",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 4,
@@ -1290,7 +1329,7 @@ const staffData = {
       "current_address_bengali": null,
       "permanent_address_bengali": null,
       "index_pds": "608732",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 6,
@@ -1329,7 +1368,7 @@ const staffData = {
       "current_address_bengali": "গ্রাম- থানাপাড়া, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "permanent_address_bengali": "গ্রাম- থানাপাড়া, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "index_pds": "608736",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 7,
@@ -1368,7 +1407,7 @@ const staffData = {
       "current_address_bengali": "গ্রাম- দক্ষিণ বন্দর, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "permanent_address_bengali": "গ্রাম- দক্ষিণ বন্দর, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "index_pds": "3085958",
-      "image_url": null
+      "image_url": teacher
     },
     {
       "serial": 8,
@@ -1407,7 +1446,7 @@ const staffData = {
       "current_address_bengali": "গ্রাম- উত্তর মিঠাখালী, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "permanent_address_bengali": "গ্রাম- উত্তর মিঠাখালী, ডাকঘর- মঠবাড়িয়া, উপজেলা- মঠবাড়িয়া, জেলা- পিরোজপুর।",
       "index_pds": "832597",
-      "image_url": null
+      "image_url": teacher
     }
   ]
 }

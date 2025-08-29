@@ -46,14 +46,14 @@ const Footer = () => {
     <div className="foonter__cont container flex flex-wrap items-stretch lg:flex-nowrap lg:justify-between gap-8 sm:mx-auto px-4 sm:px-0 xl:px-8">
       <div className="footer__cont__item footer__cont__item--summary min-w-[320px] sm:min-w-[350px] flex lg:flex-row flex-col items-center lg:items-start text-center lg:text-left w-full lg:w-5/12">
       <div className="img_wrapper ">
-        <img className="min-w-20 object-contain w-32 h-32" src={data?.institute_logo} alt="logo" />
+        <img className="min-w-20 object-contain w-28 h-28 mt-4" src={data?.institute_logo} alt="logo" />
       </div>
       {
         desc?.text ?  <div className="texts_wrapper lg:ml-5 ml-0 mt-3 lg:mt-0">
         <h2 className="xl:text-4xl text-3xl mb-2 ">{data?.institute_name}</h2>
         <p className="break-words hyphens-auto">{desc?.text}</p>
       </div> :  <div className="texts_wrapper lg:ml-5 ml-0 mt-3 lg:my-6 flex justify-center items-center">
-        <h2 className="xl:text-4xl text-3xl mb-2 ">{data?.institute_name}</h2>
+        <h2 className="xl:text-5xl text-3xl mb-2 ">{data?.institute_name}</h2>
       </div>
       }
      

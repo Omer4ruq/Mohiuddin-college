@@ -6,7 +6,8 @@ export default function NoticeBoard() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [expandedNotices, setExpandedNotices] = useState({}); // Track expanded state by notice id
+  const [expandedNotices, setExpandedNotices] = useState({});
+  const [visibleNotices, setVisibleNotices] = useState([]); // Track which notices should be visible
 
   useEffect(() => {
     Axios.get('/notices')
@@ -17,12 +18,26 @@ export default function NoticeBoard() {
         );
         setData(filteredNotices);
         setLoading(false);
+        
+        // Start the staggered animation after data loads
+        if (filteredNotices && filteredNotices.length > 0) {
+          animateNotices(filteredNotices);
+        }
       })
       .catch(error => {
         setError(error);
         setLoading(false);
       });
   }, []);
+
+  // Function to animate notices one by one
+  const animateNotices = (notices) => {
+    notices.forEach((notice, index) => {
+      setTimeout(() => {
+        setVisibleNotices(prev => [...prev, notice.id]);
+      }, index * 200); // 200ms delay between each notice
+    });
+  };
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
@@ -51,23 +66,26 @@ export default function NoticeBoard() {
 
   return (
     <div className="space-y-2 font-poppins pb-6">
-      {data?.map((notice) => (
+      {data?.map((notice, index) => (
         <div
-          className="rounded-md p-2 text-primary shadow-lg flex items-start gap-4 
-          cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110"
+          className={`rounded-md p-2 text-primary shadow-lg flex items-start gap-4 
+          cursor-pointer transition-all duration-300 ease-in-out hover:scale-105
+          ${visibleNotices.includes(notice.id) 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-8'
+          }`}
           key={notice.id}
           onClick={() => toggleExpand(notice.id)}
+          style={{
+            transform: visibleNotices.includes(notice.id) ? 'translateY(0)' : 'translateY(32px)',
+            transition: `all 0.6s ease-out ${index * 0.1}s`
+          }}
         >
-          <div className="border-r-2 border-primary w-20 text-center "
-          
-          >
+          <div className="border-r-2 border-primary w-20 text-center">
             <h3 className="text-lg font-semibold">{getDayFromDate(notice?.date)}</h3>
             <h4 className="text-xs font-semibold">{getMonthNameFromDate(notice?.date)}</h4>
           </div>
-          <div
-            className="flex-1 cursor-pointer"
-            
-          >
+          <div className="flex-1 cursor-pointer">
             <div>
               <h3 className="font-semibold">{notice?.title}</h3>
               <h4 className="text-gray-500 text-xs">

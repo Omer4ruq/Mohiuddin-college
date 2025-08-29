@@ -31,7 +31,7 @@ export default function SchoolDetails({data:hdata}) {
       <div className="mb-7 ">
         <SchoolSlider data={hdata} />
       </div>
-      <div className="flex flex-col items-center text-primary">
+      {/* <div className="flex flex-col items-center text-primary">
         <h4 className="text-2xl md:max-lg:text-3xl">
           {data?.institute_name}
         </h4>
@@ -52,7 +52,7 @@ export default function SchoolDetails({data:hdata}) {
           <FaWhatsapp className="w-6 lg:w-8 text-3xl text-primary" />
         </Link>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom"; // এই লাইন যোগ করুন
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import MegaMenuItem from "./MegaMenuItem";
 import HamburgerMenu from "./HamburgerMenu";
 import menuData from "../../../data/menuData";
+import LoginButton from "./LoginButton";
 
 export default function NavMenu() {
+  const navigate = useNavigate(); // এই লাইন যোগ করুন
   const [showNav, setShowNav] = useState(false);
   const [isMobileView, setIsMobileView] = useState(false);
   const menuRef = useRef(null);
@@ -81,8 +84,8 @@ export default function NavMenu() {
 
   const handleMenuClick = (menuItem) => {
     if (menuItem.link) {
-      // Navigate if it's a direct link
-      console.log(`Maps to: ${menuItem.link}`);
+      // React Router দিয়ে navigate করুন
+      navigate(menuItem.link);
       handleCloseDropdown();
       return;
     }
@@ -120,9 +123,12 @@ export default function NavMenu() {
                 <li
                   key={index}
                   className="nav-item py-4 px-2 cursor-pointer"
-                  onClick={() => handleMenuClick(menuItem)}
                 >
-                  <MegaMenuItem menuItem={menuItem} isActive={activeMenu?.title === menuItem.title} />
+                  <MegaMenuItem 
+                    menuItem={menuItem} 
+                    isActive={activeMenu?.title === menuItem.title}
+                    onClick={() => handleMenuClick(menuItem)} // onClick prop পাস করুন
+                  />
                 </li>
               ))}
             </ul>
@@ -158,17 +164,16 @@ export default function NavMenu() {
                           </h6>
                           <div className="space-y-2">
                             {section.items?.map((item, idx) => (
-                              <a
+                              <div
                                 key={idx}
-                                href={item.link}
                                 onClick={() => {
-                                  console.log(`Maps to: ${item.link}`);
+                                  navigate(item.link); // navigate ব্যবহার করুন
                                   handleCloseDropdown();
                                 }}
                                 className="block text-base font-semibold text-gray-500 hover:text-white hover:bg-[#183f78] px-2 py-2  transition-all duration-150 cursor-pointer transform hover:translate-x-1"
                               >
                                - {item.title}
-                              </a>
+                              </div>
                             ))}
                           </div>
                         </div>
@@ -179,6 +184,7 @@ export default function NavMenu() {
               </div>
             )}
           </div>
+          {/* <div><LoginButton></LoginButton></div> */}
         </nav>
       )}
 

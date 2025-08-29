@@ -285,10 +285,6 @@
 // export default menuData;
 
 const menuData = [
-  // {
-  //   title: "Home",
-  //   link: "/",
-  // },
   {
     title: "Administration",
     children: [
@@ -299,13 +295,17 @@ const menuData = [
             title: "Current Principal",
             link: "/current-principal",
           },
-          {
-            title: "Ex-Principals",
-            link: "/ex-principals",
+          // {
+          //   title: "Ex-Principals",
+          //   link: "/ex-principals",
+          // },
+                {
+            title: "Founder",
+            link: "/founder",
           },
         ],
       },
-            {
+      {
         title: "Teachers",
         items: [
           {
@@ -318,7 +318,7 @@ const menuData = [
           },
         ],
       },
-           {
+      {
         title: "Staffs",
         items: [
           {
@@ -342,17 +342,95 @@ const menuData = [
             title: "Main Office",
             link: "/main-office",
           },
+          // {
+          //   title: "Security",
+          //   link: "/security",
+          // },
+          // {
+          //   title: "Store",
+          //   link: "/store",
+          // },
+          // {
+          //   title: "Maintenance",
+          //   link: "/maintenance",
+          // },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Faculty",
+    children: [
+      {
+        title: "11th Grade",
+        items: [
           {
-            title: "Security",
-            link: "/security",
+            title: "Science",
+            link: "/faculty/11th-grade/science",
           },
           {
-            title: "Store",
-            link: "/store",
+            title: "Business Studies",
+            link: "/faculty/11th-grade/business-studies",
           },
           {
-            title: "Maintenance",
-            link: "/maintenance",
+            title: "Humanities",
+            link: "/faculty/11th-grade/Humanities",
+          },
+        ],
+      },
+      {
+        title: "12th Grade",
+        items: [
+          {
+            title: "Science",
+            link: "/",
+          },
+          {
+            title: "Business Studies",
+            link: "/",
+          },
+          {
+            title: "Humanities",
+            link: "/",
+          },
+        ],
+      },
+      {
+        title: "Degree 1st Year",
+        items: [
+          {
+            title: "BSS",
+            link: "/",
+          },
+          {
+            title: "BA",
+            link: "/",
+          },
+        ],
+      },
+      {
+        title: "Degree 2nd Year",
+        items: [
+          {
+            title: "BSS",
+            link: "/",
+          },
+          {
+            title: "BA",
+            link: "/",
+          },
+        ],
+      },
+      {
+        title: "Degree 3rd Year",
+        items: [
+          {
+            title: "BSS",
+            link: "/",
+          },
+          {
+            title: "BA",
+            link: "/",
           },
         ],
       },
@@ -456,22 +534,11 @@ const menuData = [
       },
     ],
   },
-  // {
-  //   title: "RESA",
-  //   link: "/resa",
-  // },
-  // {
-  //   title: "Publications",
-  //   link: "/publications",
-  // },
-  // {
-  //   title: "Career",
-  //   link: "/career",
-  // },
-  {
-    title: "Contact",
-    link: "/contact-us",
-  },
+{
+  title: "Contact",
+  link: "/contact-us"
+}
 ];
+
 
 export default menuData;

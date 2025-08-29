@@ -61,6 +61,12 @@ import CurrentHead from "./components/pages/CurrentHead";
 import StaffList from "./components/pages/StaffList";
 import ExTeachersList from "./components/pages/ExTeachersList";
 import ExStaffList from "./components/pages/ExStaffList";
+import Founder from "./components/pages/Founder";
+import PersonalDetails from "./components/pages/PersonalDetails";
+import AdminOverview from "./components/pages/AdminOverview";
+import MainOfficePage from "./components/pages/MainOfficePage";
+import FacultyDetails from "./components/pages/FacultyDetails";
+
 
 const router = createBrowserRouter([
   {
@@ -212,6 +218,10 @@ const router = createBrowserRouter([
         path: "/current-principal",
         element: <CurrentHead></CurrentHead>,
       },
+               {
+        path: "/founder",
+        element: <Founder></Founder>,
+      },
       {
         path: "/current-teachers-list",
         element: <TeachersList></TeachersList>,
@@ -232,6 +242,44 @@ const router = createBrowserRouter([
         path: "/ex-principals",
         element: <ExPrincipals />,
       },
+      
+      // ADD THESE NEW PERSONAL DETAILS ROUTES
+      {
+        path: "/faculty/teacher/:serial",
+        element: <PersonalDetails />,
+      },
+      {
+        path: "/faculty/ex-teacher/:serial",
+        element: <PersonalDetails />,
+      },
+      {
+        path: "/staff/:serial",
+        element: <PersonalDetails />,
+      },
+      {
+        path: "/staff/ex-staff/:serial",
+        element: <PersonalDetails />,
+      },
+      {
+        path: "/head/profile",
+        element: <PersonalDetails />,
+      },
+      {
+        path: "/founder/profile",
+        element: <PersonalDetails />,
+      },
+         {
+        path: "/admin",
+        element: <AdminOverview />,
+      },
+        {
+        path: "/main-office",
+        element: <MainOfficePage />,
+      },
+      {
+  path: "/faculty/:faculty/:subject",
+  element: <FacultyDetails />,
+},
       {
         path: "/bm-ds",
         element: <Bmds />,
