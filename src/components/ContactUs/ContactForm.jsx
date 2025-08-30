@@ -48,13 +48,13 @@ export default function ContactForm({map}) {
   } 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br-50 py-12 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br-50 py-12 sm:px-0 px-4">
+      <div className="mx-auto">
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
           <div className="flex flex-col lg:flex-row min-h-[700px]">
             
             {/* Map Section */}
-            <div className="w-full lg:w-1/2 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center p-2">
+            <div className="w-full lg:w-1/2  flex items-center justify-center p-2">
               <div className="w-full h-full flex items-center justify-center">
                 <div className="w-full">
                   <ContactMap map={map} />
@@ -64,7 +64,7 @@ export default function ContactForm({map}) {
 
             {/* Form Section */}
             <div className="w-full lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-white to-gray-50">
-              <div className="max-w-md mx-auto w-full">
+              <div className="mx-auto w-full">
                 <div className="text-center mb-8">
                   <h2 className="text-4xl lg:text-5xl font-bold text-gray-700 bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 mb-3">
                     Contact Us

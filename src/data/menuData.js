@@ -284,6 +284,7 @@
 
 // export default menuData;
 
+
 const menuData = [
   {
     title: "Administration",
@@ -295,10 +296,10 @@ const menuData = [
             title: "Current Principal",
             link: "/current-principal",
           },
-          // {
-          //   title: "Ex-Principals",
-          //   link: "/ex-principals",
-          // },
+          {
+            title: "Ex-Principals",
+            link: "/ex-principals",
+          },
                 {
             title: "Founder",
             link: "/founder",
@@ -334,10 +335,10 @@ const menuData = [
       {
         title: "Admin Wing",
         items: [
-          {
-            title: "Admin",
-            link: "/admin",
-          },
+          // {
+          //   title: "Admin",
+          //   link: "/admin",
+          // },
           {
             title: "Main Office",
             link: "/main-office",
@@ -537,7 +538,8 @@ const menuData = [
 {
   title: "Contact",
   link: "/contact-us"
-}
+},
+
 ];
 
 

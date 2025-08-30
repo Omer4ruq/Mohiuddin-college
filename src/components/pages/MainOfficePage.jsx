@@ -66,7 +66,7 @@ export default function MainOfficePageBn() {
   }, [q, activeSection]);
 
   return (
-    <div className="min-h-screen w-full bg-slate-50 text-slate-900">
+    <div className="min-h-screen w-full bg-gray-100 text-black">
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
@@ -79,17 +79,17 @@ export default function MainOfficePageBn() {
               <p className="text-xs text-slate-500">বিশ্ববিদ্যালয় প্রশাসনের ডিরেক্টরি</p>
             </div>
           </div>
-          <a
+          {/* <a
             href="/dashboard"
             className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition hover:shadow-md"
           >
             ড্যাশবোর্ডে যান <ChevronRight className="h-4 w-4" />
-          </a>
+          </a> */}
         </div>
       </header>
 
       {/* Filters */}
-      <section className="bg-gradient-to-b from-indigo-50 to-transparent">
+      <section className="">
         <div className="mx-auto max-w-7xl px-4 py-8">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
@@ -152,7 +152,7 @@ export default function MainOfficePageBn() {
                     >
                       <div className="flex items-center gap-5">
                         <div className="grid h-16 w-16 shrink-0 place-items-center rounded-2xl bg-indigo-100 text-indigo-700 text-xl font-bold">
-                          {role.name.split(" ").map(w => w[0]).slice(0,2).join("")}
+                        <img className="w-full h-full object-cover rounded-2xl" src="https://media.istockphoto.com/id/2160439329/photo/happy-multiethnic-male-teacher-smiling-at-primary-school.jpg?s=612x612&w=0&k=20&c=0-Lem0EucN1GIoZduYU0rPXUZuGuquTgz_nPXuR-210=" alt="" />
                         </div>
                         <div className="min-w-0">
                           <h4 className="truncate text-lg font-semibold leading-tight">{role.name}</h4>
@@ -170,12 +170,12 @@ export default function MainOfficePageBn() {
                           <div className="hidden sm:block">•</div>
                           <div>সময়: ৯:০০–১৭:০০</div>
                         </div>
-                        <a
+                        {/* <a
                           href="#"
                           className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium shadow-sm transition hover:shadow-md"
                         >
                           বিস্তারিত দেখুন <ChevronRight className="h-3.5 w-3.5" />
-                        </a>
+                        </a> */}
                       </div>
                     </motion.div>
                   ))}
@@ -192,11 +192,7 @@ export default function MainOfficePageBn() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-slate-200 bg-white/70">
-        <div className="mx-auto max-w-7xl px-4 py-6 text-center text-xs text-slate-500">
-          © {new Date().getFullYear()} আপনার বিশ্ববিদ্যালয় — প্রধান অফিস
-        </div>
-      </footer>
+
     </div>
   );
 }

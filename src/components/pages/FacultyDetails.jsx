@@ -7,7 +7,7 @@ const FacultyDetails = () => {
   const [facultyData, setFacultyData] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Sample faculty data - replace with your actual data source
+  // Enhanced faculty data with more teachers and subjects
   const facultyDatabase = {
     'science': {
       name: 'বিজ্ঞান বিভাগ',
@@ -16,35 +16,75 @@ const FacultyDetails = () => {
         name: 'ড. মোহাম্মদ আব্দুল্লাহ',
         englishName: 'Dr. Mohammad Abdullah',
         designation: 'বিভাগীয় প্রধান',
-        image: '/api/placeholder/300/400',
-        message: 'বিজ্ঞান বিভাগে আপনাদের স্বাগতম। আমাদের লক্ষ্য হলো শিক্ষার্থীদের মধ্যে বৈজ্ঞানিক চিন্তাভাবনা গড়ে তোলা এবং তাদের ভবিষ্যতের জন্য প্রস্তুত করা।',
+        image: 'https://img.freepik.com/premium-photo/indian-male-teacher_981168-3025.jpg?w=360',
+        message: 'বিজ্ঞান বিভাগে আপনাদের স্বাগতম। আমাদের লক্ষ্য হলো শিক্ষার্থীদের মধ্যে বৈজ্ঞানিক চিন্তাভাবনা গড়ে তোলা এবং তাদের ভবিষ্যতের জন্য প্রস্তুত করা। আমরা আধুনিক পরীক্ষাগার ও যন্ত্রপাতি দিয়ে সজ্জিত এবং অভিজ্ঞ শিক্ষকমণ্ডলীর মাধ্যমে মানসম্পন্ন শিক্ষা প্রদান করে থাকি।',
         email: 'abdullah@college.edu.bd',
         phone: '01711-123456'
       },
+      subjects: [
+        { name: 'পদার্থবিজ্ঞান', code: 'PHY', description: 'প্রাকৃতিক বিজ্ঞানের মৌলিক নীতিমালা অধ্যয়ন' },
+        { name: 'রসায়ন', code: 'CHE', description: 'রাসায়নিক পদার্থ ও বিক্রিয়ার বিশ্লেষণ' },
+        { name: 'জীববিজ্ঞান', code: 'BIO', description: 'জীবজগতের গঠন ও কার্যাবলী অধ্যয়ন' },
+        { name: 'গণিত', code: 'MAT', description: 'সংখ্যা, আকার ও প্যাটার্নের বিজ্ঞান' },
+        { name: 'পরিসংখ্যান', code: 'STA', description: 'তথ্য সংগ্রহ, বিশ্লেষণ ও ব্যাখ্যা' },
+        { name: 'ভূগোল', code: 'GEO', description: 'পৃথিবীর ভৌত ও মানবিক বৈশিষ্ট্য' }
+      ],
       teachers: [
         {
           name: 'অধ্যাপক রহিমা খাতুন',
           subject: 'পদার্থবিজ্ঞান',
-          qualification: 'এমএসসি (পদার্থবিজ্ঞান)',
-          experience: '15 বছর'
+          qualification: 'এমএসসি (পদার্থবিজ্ঞান), ঢাকা বিশ্ববিদ্যালয়',
+          experience: '15 বছর',
+          specialization: 'কোয়ান্টাম ফিজিক্স',
+          image: 'https://img.freepik.com/free-photo/woman-teaching-classroom_23-2151696435.jpg'
         },
         {
           name: 'ড. কামরুল ইসলাম',
           subject: 'রসায়ন',
-          qualification: 'পিএইচডি (রসায়ন)',
-          experience: '12 বছর'
+          qualification: 'পিএইচডি (রসায়ন), চট্টগ্রাম বিশ্ববিদ্যালয়',
+          experience: '12 বছর',
+          specialization: 'জৈব রসায়ন',
+          image: 'https://img.freepik.com/premium-photo/indian-male-teacher_981168-3025.jpg?w=360'
         },
         {
           name: 'প্রফেসর নাসির আহমেদ',
           subject: 'জীববিজ্ঞান',
-          qualification: 'এমএসসি (জীববিজ্ঞান)',
-          experience: '18 বছর'
+          qualification: 'এমএসসি (জীববিজ্ঞান), রাজশাহী বিশ্ববিদ্যালয়',
+          experience: '18 বছর',
+          specialization: 'উদ্ভিদ জীববিজ্ঞান',
+          image: 'https://media.istockphoto.com/id/678420920/photo/portrait-of-an-indian-lady-teacher.jpg?s=612x612&w=0&k=20&c=N46IVDbat0L9cZgU3lFwcP_hqufN-BRrM1RJHCZlBzc='
+        },
+        {
+          name: 'অধ্যাপকা সুমিত্রা দাস',
+          subject: 'গণিত',
+          qualification: 'এমএসসি (গণিত), জাহাঙ্গীরনগর বিশ্ববিদ্যালয়',
+          experience: '14 বছর',
+          specialization: 'পরিমিত গণিত',
+          image: 'https://img.freepik.com/free-photo/woman-teaching-classroom_23-2151696435.jpg'
+        },
+        {
+          name: 'ড. আব্দুর রশিদ',
+          subject: 'পরিসংখ্যান',
+          qualification: 'পিএইচডি (পরিসংখ্যান), ঢাকা বিশ্ববিদ্যালয়',
+          experience: '16 বছর',
+          specialization: 'প্রয়োগিক পরিসংখ্যান',
+          image: 'https://img.freepik.com/premium-photo/indian-male-teacher_981168-3025.jpg?w=360'
+        },
+        {
+          name: 'প্রফেসর মারিয়া খান',
+          subject: 'ভূগোল',
+          qualification: 'এমএ (ভূগোল), ঢাকা বিশ্ববিদ্যালয়',
+          experience: '13 বছর',
+          specialization: 'মানব ভূগোল',
+          image: 'https://media.istockphoto.com/id/678420920/photo/portrait-of-an-indian-lady-teacher.jpg?s=612x612&w=0&k=20&c=N46IVDbat0L9cZgU3lFwcP_hqufN-BRrM1RJHCZlBzc='
         }
       ],
       students: [
-        { name: 'রাহুল আহমেদ', class: 'একাদশ শ্রেণী', gpa: '৪.৮৫' },
-        { name: 'ফাতিমা খান', class: 'দ্বাদশ শ্রেণী', gpa: '৪.৯০' },
-        { name: 'তানভীর হাসান', class: 'একাদশ শ্রেণী', gpa: '৪.৭৫' }
+        { name: 'রাহুল আহমেদ', class: 'একাদশ শ্রেণী', gpa: '৪.৮৫', subject: 'পদার্থবিজ্ঞান' },
+        { name: 'ফাতিমা খান', class: 'দ্বাদশ শ্রেণী', gpa: '৪.৯০', subject: 'রসায়ন' },
+        { name: 'তানভীর হাসান', class: 'একাদশ শ্রেণী', gpa: '৪.৭৫', subject: 'জীববিজ্ঞান' },
+        { name: 'আয়েশা সিদ্দিকা', class: 'দ্বাদশ শ্রেণী', gpa: '৪.৮৮', subject: 'গণিত' },
+        { name: 'মোহাম্মদ রফিক', class: 'একাদশ শ্রেণী', gpa: '৪.৭২', subject: 'পরিসংখ্যান' }
       ],
       alumni: [
         {
@@ -55,7 +95,7 @@ const FacultyDetails = () => {
         },
         {
           name: 'ইঞ্জিনিয়ার মাহমুদুল হাসান',
-          currentPosition: 'সিনিয়র ইঞ্জিনিয়ার, গুগল',
+          currentPosition: 'সিনিয়ার ইঞ্জিনিয়ার, গুগল',
           graduationYear: '২০১৬',
           achievement: 'আন্তর্জাতিক প্রোগ্রামিং প্রতিযোগিতায় স্বর্ণপদক'
         }
@@ -64,7 +104,7 @@ const FacultyDetails = () => {
         {
           title: 'বিজ্ঞান বিভাগে নতুন ল্যাব চালু',
           date: '১৫ ডিসেম্বর, ২০২৪',
-          description: 'অত্याधुনিक যন্ত্রপাতি সহ নতুন পদার্থবিজ্ঞান গবেষণাগার চালু করা হয়েছে।'
+          description: 'অত্যাধুনিক যন্ত্রপাতি সহ নতুন পদার্থবিজ্ঞান গবেষণাগার চালু করা হয়েছে।'
         },
         {
           title: 'আন্তর্জাতিক বিজ্ঞান মেলায় প্রথম স্থান',
@@ -80,28 +120,75 @@ const FacultyDetails = () => {
         name: 'প্রফেসর সালমা আক্তার',
         englishName: 'Professor Salma Akter',
         designation: 'বিভাগীয় প্রধান',
-        image: '/api/placeholder/300/400',
-        message: 'ব্যবসায় শিক্ষা বিভাগে আপনাদের স্বাগতম। আমরা শিক্ষার্থীদের আধুনিক ব্যবসায়িক জ্ঞান ও দক্ষতায় সমৃদ্ধ করে তুলতে প্রতিশ্রুতিবদ্ধ।',
+        image: 'https://img.freepik.com/free-photo/woman-teaching-classroom_23-2151696435.jpg',
+        message: 'ব্যবসায় শিক্ষা বিভাগে আপনাদের স্বাগতম। আমরা শিক্ষার্থীদের আধুনিক ব্যবসায়িক জ্ঞান ও দক্ষতায় সমৃদ্ধ করে তুলতে প্রতিশ্রুতিবদ্ধ। আমাদের বিভাগ থেকে প্রতি বছর দক্ষ ব্যবসায়িক নেতৃত্ব তৈরি হয়ে দেশ ও জাতির সেবায় নিয়োজিত হচ্ছেন।',
         email: 'salma@college.edu.bd',
         phone: '01711-789012'
       },
+      subjects: [
+        { name: 'হিসাববিজ্ঞান', code: 'ACC', description: 'আর্থিক লেনদেন ও হিসাব নিকাশের বিজ্ঞান' },
+        { name: 'ব্যবস্থাপনা', code: 'MGT', description: 'সংগঠন পরিচালনা ও নেতৃত্বের কলাকৌশল' },
+        { name: 'অর্থনীতি', code: 'ECO', description: 'অর্থনৈতিক নীতিমালা ও বাজার বিশ্লেষণ' },
+        { name: 'বিপণন', code: 'MKT', description: 'পণ্য ও সেবার বিপণন কৌশল' },
+        { name: 'ব্যাংকিং', code: 'BNK', description: 'আর্থিক প্রতিষ্ঠান ও ব্যাংকিং সেবা' },
+        { name: 'বীমা', code: 'INS', description: 'ঝুঁকি ব্যবস্থাপনা ও বীমা নীতিমালা' }
+      ],
       teachers: [
         {
           name: 'অধ্যাপক আনিসুর রহমান',
           subject: 'হিসাববিজ্ঞান',
-          qualification: 'এমকম (হিসাববিজ্ঞান)',
-          experience: '20 বছর'
+          qualification: 'এমকম (হিসাববিজ্ঞান), ঢাকা বিশ্ববিদ্যালয়',
+          experience: '20 বছর',
+          specialization: 'ব্যবস্থাপনা হিসাববিজ্ঞান',
+          image: 'https://img.freepik.com/premium-photo/indian-male-teacher_981168-3025.jpg?w=360'
         },
         {
           name: 'ড. রেজাউল করিম',
           subject: 'ব্যবস্থাপনা',
-          qualification: 'পিএইচডি (ব্যবস্থাপনা)',
-          experience: '14 বছর'
+          qualification: 'পিএইচডি (ব্যবস্থাপনা), চট্টগ্রাম বিশ্ববিদ্যালয়',
+          experience: '14 বছর',
+          specialization: 'মানবসম্পদ ব্যবস্থাপনা',
+          image: 'https://media.istockphoto.com/id/678420920/photo/portrait-of-an-indian-lady-teacher.jpg?s=612x612&w=0&k=20&c=N46IVDbat0L9cZgU3lFwcP_hqufN-BRrM1RJHCZlBzc='
+        },
+        {
+          name: 'প্রফেসর নাজিয়া খাতুন',
+          subject: 'অর্থনীতি',
+          qualification: 'এমএ (অর্থনীতি), জাহাঙ্গীরনগর বিশ্ববিদ্যালয়',
+          experience: '17 বছর',
+          specialization: 'উন্নয়ন অর্থনীতি',
+          image: 'https://img.freepik.com/free-photo/woman-teaching-classroom_23-2151696435.jpg'
+        },
+        {
+          name: 'অধ্যাপক মোহাম্মদ করিম',
+          subject: 'বিপণন',
+          qualification: 'এমবিএ (বিপণন), ঢাকা বিশ্ববিদ্যালয়',
+          experience: '12 বছর',
+          specialization: 'ডিজিটাল মার্কেটিং',
+          image: 'https://img.freepik.com/premium-photo/indian-male-teacher_981168-3025.jpg?w=360'
+        },
+        {
+          name: 'অধ্যাপকা ফারজানা আক্তার',
+          subject: 'ব্যাংকিং',
+          qualification: 'এমবিএ (ব্যাংকিং), রাজশাহী বিশ্ববিদ্যালয়',
+          experience: '15 বছর',
+          specialization: 'ইসলামিক ব্যাংকিং',
+          image: 'https://media.istockphoto.com/id/678420920/photo/portrait-of-an-indian-lady-teacher.jpg?s=612x612&w=0&k=20&c=N46IVDbat0L9cZgU3lFwcP_hqufN-BRrM1RJHCZlBzc='
+        },
+        {
+          name: 'প্রফেসর আলী হাসান',
+          subject: 'বীমা',
+          qualification: 'এমকম (বীমা), চট্টগ্রাম বিশ্ববিদ্যালয়',
+          experience: '11 বছর',
+          specialization: 'জীবন বীমা',
+          image: 'https://img.freepik.com/premium-photo/indian-male-teacher_981168-3025.jpg?w=360'
         }
       ],
       students: [
-        { name: 'আয়েশা সিদ্দিকা', class: 'একাদশ শ্রেণী', gpa: '৪.৬৫' },
-        { name: 'মোস্তাফিজুর রহমান', class: 'দ্বাদশ শ্রেণী', gpa: '৪.৮০' }
+        { name: 'আয়েশা সিদ্দিকা', class: 'একাদশ শ্রেণী', gpa: '৪.৬৫', subject: 'হিসাববিজ্ঞান' },
+        { name: 'মোস্তাফিজুর রহমান', class: 'দ্বাদশ শ্রেণী', gpa: '৪.৮০', subject: 'ব্যবস্থাপনা' },
+        { name: 'সাদিয়া খান', class: 'একাদশ শ্রেণী', gpa: '৪.৭৮', subject: 'অর্থনীতি' },
+        { name: 'রাকিব হাসান', class: 'দ্বাদশ শ্রেণী', gpa: '৪.৬৮', subject: 'বিপণন' },
+        { name: 'নুসরাত জাহান', class: 'একাদশ শ্রেণী', gpa: '৪.৭২', subject: 'ব্যাংকিং' }
       ],
       alumni: [
         {
@@ -126,28 +213,84 @@ const FacultyDetails = () => {
         name: 'ড. মাহবুবা রহমান',
         englishName: 'Dr. Mahbuba Rahman',
         designation: 'বিভাগীয় প্রধান',
-        image: '/api/placeholder/300/400',
-        message: 'মানবিক বিভাগে আপনাদের স্বাগতম। আমাদের উদ্দেশ্য হলো শিক্ষার্থীদের মানবিক মূল্যবোধ ও সাংস্কৃতিক ঐতিহ্য সম্পর্কে সচেতন করে তোলা।',
+        image: 'https://media.istockphoto.com/id/678420920/photo/portrait-of-an-indian-lady-teacher.jpg?s=612x612&w=0&k=20&c=N46IVDbat0L9cZgU3lFwcP_hqufN-BRrM1RJHCZlBzc=',
+        message: 'মানবিক বিভাগে আপনাদের স্বাগতম। আমাদের উদ্দেশ্য হলো শিক্ষার্থীদের মানবিক মূল্যবোধ ও সাংস্কৃতিক ঐতিহ্য সম্পর্কে সচেতন করে তোলা। আমরা ভাষা, সাহিত্য, ইতিহাস ও দর্শনের মাধ্যমে একটি সুশিক্ষিত ও মানবিক সমাজ গড়ার স্বপ্ন দেখি।',
         email: 'mahbuba@college.edu.bd',
         phone: '01711-345678'
       },
+      subjects: [
+        { name: 'বাংলা', code: 'BAN', description: 'বাংলা ভাষা ও সাহিত্যের পূর্ণাঙ্গ অধ্যয়ন' },
+        { name: 'ইংরেজি', code: 'ENG', description: 'ইংরেজি ভাষা ও বিশ্ব সাহিত্য' },
+        { name: 'ইতিহাস', code: 'HIS', description: 'বিশ্ব ও বাংলাদেশের ইতিহাস' },
+        { name: 'দর্শন', code: 'PHI', description: 'মানব চিন্তাধারা ও দর্শনের বিকাশ' },
+        { name: 'ইসলামের ইতিহাস', code: 'IHC', description: 'ইসলামি সভ্যতা ও সংস্কৃতি' },
+        { name: 'সমাজবিজ্ঞান', code: 'SOC', description: 'সামাজিক গঠন ও আচার-আচরণ বিশ্লেষণ' },
+        { name: 'রাষ্ট্রবিজ্ঞান', code: 'POL', description: 'রাজনৈতিক ব্যবস্থা ও শাসন তত্ত্ব' }
+      ],
       teachers: [
         {
           name: 'প্রফেসর আবদুল মান্নান',
           subject: 'বাংলা',
-          qualification: 'এমএ (বাংলা সাহিত্য)',
-          experience: '25 বছর'
+          qualification: 'এমএ (বাংলা সাহিত্য), ঢাকা বিশ্ববিদ্যালয়',
+          experience: '25 বছর',
+          specialization: 'রবীন্দ্র সাহিত্য',
+          image: 'https://img.freepik.com/premium-photo/indian-male-teacher_981168-3025.jpg?w=360'
         },
         {
           name: 'অধ্যাপকা রোকেয়া খাতুন',
           subject: 'ইতিহাস',
-          qualification: 'এমএ (ইতিহাস)',
-          experience: '16 বছর'
+          qualification: 'এমএ (ইতিহাস), জাহাঙ্গীরনগর বিশ্ববিদ্যালয়',
+          experience: '16 বছর',
+          specialization: 'মুক্তিযুদ্ধের ইতিহাস',
+          image: 'https://media.istockphoto.com/id/678420920/photo/portrait-of-an-indian-lady-teacher.jpg?s=612x612&w=0&k=20&c=N46IVDbat0L9cZgU3lFwcP_hqufN-BRrM1RJHCZlBzc='
+        },
+        {
+          name: 'ড. শাহজাহান আলী',
+          subject: 'ইংরেজি',
+          qualification: 'পিএইচডি (ইংরেজি সাহিত্য), রাজশাহী বিশ্ববিদ্যালয়',
+          experience: '18 বছর',
+          specialization: 'শেক্সপিয়ার স্টাডিজ',
+          image: 'https://img.freepik.com/premium-photo/indian-male-teacher_981168-3025.jpg?w=360'
+        },
+        {
+          name: 'প্রফেসর নুরুল আমিন',
+          subject: 'দর্শন',
+          qualification: 'এমএ (দর্শন), চট্টগ্রাম বিশ্ববিদ্যালয়',
+          experience: '22 বছর',
+          specialization: 'ইসলামি দর্শন',
+          image: 'https://img.freepik.com/premium-photo/indian-male-teacher_981168-3025.jpg?w=360'
+        },
+        {
+          name: 'অধ্যাপকা সুফিয়া বেগম',
+          subject: 'ইসলামের ইতিহাস',
+          qualification: 'এমএ (ইসলামের ইতিহাস), ঢাকা বিশ্ববিদ্যালয়',
+          experience: '19 বছর',
+          specialization: 'মধ্যযুগীয় ইসলামি সভ্যতা',
+          image: 'https://img.freepik.com/free-photo/woman-teaching-classroom_23-2151696435.jpg'
+        },
+        {
+          name: 'ড. মনিরুজ্জামান',
+          subject: 'সমাজবিজ্ঞান',
+          qualification: 'পিএইচডি (সমাজবিজ্ঞান), জাহাঙ্গীরনগর বিশ্ববিদ্যালয়',
+          experience: '14 বছর',
+          specialization: 'গ্রামীণ সমাজব্যবস্থা',
+          image: 'https://img.freepik.com/premium-photo/indian-male-teacher_981168-3025.jpg?w=360'
+        },
+        {
+          name: 'প্রফেসর ফাহমিদা খাতুন',
+          subject: 'রাষ্ট্রবিজ্ঞান',
+          qualification: 'এমএসএস (রাষ্ট্রবিজ্ঞান), রাজশাহী বিশ্ববিদ্যালয়',
+          experience: '13 বছর',
+          specialization: 'তুলনামূলক রাজনীতি',
+          image: 'https://media.istockphoto.com/id/678420920/photo/portrait-of-an-indian-lady-teacher.jpg?s=612x612&w=0&k=20&c=N46IVDbat0L9cZgU3lFwcP_hqufN-BRrM1RJHCZlBzc='
         }
       ],
       students: [
-        { name: 'নুসরাত জাহান', class: 'দ্বাদশ শ্রেণী', gpa: '৪.৯৫' },
-        { name: 'আরিফুল ইসলাম', class: 'একাদশ শ্রেণী', gpa: '৪.৭০' }
+        { name: 'নুসরাত জাহান', class: 'দ্বাদশ শ্রেণী', gpa: '৪.৯৫', subject: 'বাংলা' },
+        { name: 'আরিফুল ইসলাম', class: 'একাদশ শ্রেণী', gpa: '৪.৭০', subject: 'ইতিহাস' },
+        { name: 'তাহমিনা আক্তার', class: 'দ্বাদশ শ্রেণী', gpa: '৪.৮২', subject: 'ইংরেজি' },
+        { name: 'আব্দুল্লাহ আল মামুন', class: 'একাদশ শ্রেণী', gpa: '৪.৬৮', subject: 'দর্শন' },
+        { name: 'সাইদা খাতুন', class: 'দ্বাদশ শ্রেণী', gpa: 'ৄ.৭৮', subject: 'সমাজবিজ্ঞান' }
       ],
       alumni: [
         {
@@ -197,6 +340,7 @@ const FacultyDetails = () => {
   const sections = [
     { id: 'message', label: 'বিভাগীয় প্রধানের বার্তা' },
     { id: 'about', label: 'আমাদের সম্পর্কে' },
+    { id: 'subjects', label: 'বিষয়সমূহ' },
     { id: 'academics', label: 'শিক্ষা কার্যক্রম' },
     { id: 'teachers', label: 'শিক্ষকমণ্ডলী' },
     { id: 'students', label: 'শিক্ষার্থী তথ্য' },
@@ -216,44 +360,6 @@ const FacultyDetails = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <div className="flex">
-        {/* Left Sidebar */}
-        <div className="w-80 bg-white shadow-lg min-h-screen">
-          <div className="p-6">
-            {/* Close Button */}
-            <div className="flex justify-end mb-4">
-              <button 
-                onClick={() => window.history.back()}
-                className="text-gray-400 hover:text-gray-600 text-xl"
-              >
-                ✕
-              </button>
-            </div>
-
-            {/* Faculty Title */}
-            <div className="mb-6">
-              <h2 className="text-xl font-bold text-gray-800">{facultyData.name}</h2>
-              <p className="text-sm text-gray-600">{facultyData.englishName}</p>
-            </div>
-
-            {/* Navigation Menu */}
-            <div className="space-y-1">
-              {sections.map((section) => (
-                <button
-                  key={section.id}
-                  onClick={() => handleSectionClick(section.id)}
-                  className={`w-full text-left px-4 py-3 text-sm rounded transition-colors ${
-                    activeSection === section.id
-                      ? 'bg-blue-600 text-white font-medium'
-                      : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
-                  }`}
-                >
-                  {section.label}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
         {/* Main Content */}
         <div className="flex-1 bg-gray-100">
           {/* Header Section */}
@@ -279,12 +385,6 @@ const FacultyDetails = () => {
                   <div className="mt-4 text-center">
                     <h3 className="font-semibold text-gray-800">{facultyData.head.name}</h3>
                     <p className="text-sm text-gray-600">{facultyData.head.designation}</p>
-                    <Link 
-                      to={`/faculty/head/${subject}`}
-                      className="inline-block mt-2 bg-blue-600 text-white px-4 py-2 rounded text-sm hover:bg-blue-700 transition-colors"
-                    >
-                      বিস্তারিত প্রোফাইল
-                    </Link>
                   </div>
                 </div>
                 
@@ -316,6 +416,22 @@ const FacultyDetails = () => {
               </div>
             </div>
 
+            {/* Subjects Section */}
+            <div id="subjects" className="bg-white rounded-lg p-6 shadow-sm mb-8">
+              <h2 className="text-2xl font-bold text-blue-600 mb-6">বিষয়সমূহ</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {facultyData.subjects.map((subject, index) => (
+                  <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="font-semibold text-gray-800">{subject.name}</h4>
+                      <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">{subject.code}</span>
+                    </div>
+                    <p className="text-sm text-gray-600">{subject.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Academics Section */}
             <div id="academics" className="bg-white rounded-lg p-6 shadow-sm mb-8">
               <h2 className="text-2xl font-bold text-blue-600 mb-6">শিক্ষা কার্যক্রম</h2>
@@ -338,13 +454,23 @@ const FacultyDetails = () => {
             {/* Teachers Section */}
             <div id="teachers" className="bg-white rounded-lg p-6 shadow-sm mb-8">
               <h2 className="text-2xl font-bold text-blue-600 mb-6">শিক্ষকমণ্ডলী</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {facultyData.teachers.map((teacher, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg p-4">
-                    <h4 className="font-semibold text-gray-800 mb-2">{teacher.name}</h4>
-                    <p className="text-sm text-gray-600 mb-1"><strong>বিষয়:</strong> {teacher.subject}</p>
-                    <p className="text-sm text-gray-600 mb-1"><strong>যোগ্যতা:</strong> {teacher.qualification}</p>
-                    <p className="text-sm text-gray-600"><strong>অভিজ্ঞতা:</strong> {teacher.experience}</p>
+                  <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <div className="flex flex-col items-center mb-4">
+                      <img
+                        src={teacher.image}
+                        alt={teacher.name}
+                        className="w-20 h-20 object-cover rounded-full mb-3"
+                      />
+                      <h4 className="font-semibold text-gray-800 text-center">{teacher.name}</h4>
+                    </div>
+                    <div className="space-y-2">
+                      <p className="text-sm text-gray-600"><strong>বিষয়:</strong> {teacher.subject}</p>
+                      <p className="text-sm text-gray-600"><strong>যোগ্যতা:</strong> {teacher.qualification}</p>
+                      <p className="text-sm text-gray-600"><strong>অভিজ্ঞতা:</strong> {teacher.experience}</p>
+                      <p className="text-sm text-gray-600"><strong>বিশেষত্ব:</strong> {teacher.specialization}</p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -359,14 +485,16 @@ const FacultyDetails = () => {
                     <tr>
                       <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">নাম</th>
                       <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">শ্রেণী</th>
+                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">বিষয়</th>
                       <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">জিপিএ</th>
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
                     {facultyData.students.map((student, index) => (
-                      <tr key={index}>
+                      <tr key={index} className="hover:bg-gray-50">
                         <td className="px-4 py-4 text-sm text-gray-900">{student.name}</td>
                         <td className="px-4 py-4 text-sm text-gray-500">{student.class}</td>
+                        <td className="px-4 py-4 text-sm text-gray-500">{student.subject}</td>
                         <td className="px-4 py-4 text-sm text-gray-500">{student.gpa}</td>
                       </tr>
                     ))}

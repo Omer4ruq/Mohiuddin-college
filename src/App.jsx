@@ -76,8 +76,6 @@ export default function App() {
     <div
     style={{
         backgroundImage: `url(${backgroundImage})`,
-      
-       
       }}
     className="font-poppins">
       <Header />

@@ -66,6 +66,7 @@ import PersonalDetails from "./components/pages/PersonalDetails";
 import AdminOverview from "./components/pages/AdminOverview";
 import MainOfficePage from "./components/pages/MainOfficePage";
 import FacultyDetails from "./components/pages/FacultyDetails";
+import ExPrincipal from "./components/pages/ExPrincipal";
 
 
 const router = createBrowserRouter([
@@ -217,6 +218,10 @@ const router = createBrowserRouter([
          {
         path: "/current-principal",
         element: <CurrentHead></CurrentHead>,
+      },
+         {
+        path: "/ex-principals",
+        element: <ExPrincipal></ExPrincipal>,
       },
                {
         path: "/founder",

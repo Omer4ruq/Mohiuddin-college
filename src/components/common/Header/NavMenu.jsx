@@ -117,8 +117,8 @@ export default function NavMenu() {
 
       {!isMobileView && (
         <nav ref={navRef} className="bg-[#061742] relative z-50">
-          <div className="max-w-7xl mx-auto px-4 relative">
-            <ul className="flex items-center justify-center space-x-1">
+          <div className="xl:min-w-full max-w-5xl mx-auto px-4 relative">
+            <ul className="flex items-center flex-wrap justify-center space-x-1">
               {menuData.map((menuItem, index) => (
                 <li
                   key={index}
@@ -129,8 +129,12 @@ export default function NavMenu() {
                     isActive={activeMenu?.title === menuItem.title}
                     onClick={() => handleMenuClick(menuItem)} // onClick prop পাস করুন
                   />
+                  
                 </li>
               ))}
+              <li className="pl-5">
+                  <LoginButton></LoginButton>
+              </li>
             </ul>
             
             {/* Dropdown aligned with main menu content container */}
@@ -214,6 +218,9 @@ export default function NavMenu() {
                   setShowNav={setShowNav}
                 />
               ))}
+              <div className="pt-10">
+                  <LoginButton></LoginButton>
+              </div>
             </ul>
           </div>
         </div>
