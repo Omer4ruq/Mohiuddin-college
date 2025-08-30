@@ -2,59 +2,59 @@ import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Building2, Users, Search, ChevronRight } from "lucide-react";
 
-// Main Office Page — big cards showing university administration names
+// Main Office Page — Bangla UI & data
 // Pure TSX (no explicit TypeScript types). TailwindCSS + Framer Motion + Lucide icons.
 
 const SECTIONS = [
   {
     id: "executive",
-    title: "Executive Office",
-    desc: "Top leadership and executive oversight",
+    title: "নির্বাহী অফিস",
+    desc: "শীর্ষ নেতৃত্ব ও নির্বাহী তদারকি",
     roles: [
-      { id: "principal", title: "Principal", name: "Md. Sajjad Hossain" },
-      { id: "vice_principal", title: "Vice Principal", name: "Dr. Farzana Ahmed" },
-      { id: "registrar", title: "Registrar", name: "Md. Kamrul Hasan" },
-      { id: "controller_exam", title: "Controller of Examinations", name: "Prof. Nazmul Arefin" },
+      { id: "principal", title: "অধ্যক্ষ", name: "মোঃ সাজ্জাদ হোসেন" },
+      { id: "vice_principal", title: "উপাধ্যক্ষ", name: "ডাঃ ফারজানা আহমেদ" },
+      { id: "registrar", title: "রেজিস্ট্রার", name: "মোঃ কামরুল হাসান" },
+      { id: "controller_exam", title: "পরীক্ষা নিয়ন্ত্রক", name: "প্রফেসর নাজমুল আরেফিন" },
     ],
   },
   {
     id: "academic",
-    title: "Academic Affairs",
-    desc: "Faculties, research, and curriculum administration",
+    title: "একাডেমিক বিষয়াবলি",
+    desc: "ফ্যাকাল্টি, গবেষণা ও কারিকুলাম ব্যবস্থাপনা",
     roles: [
-      { id: "dean_arts", title: "Dean, Faculty of Arts", name: "Prof. Shabnam Jahan" },
-      { id: "dean_science", title: "Dean, Faculty of Science", name: "Prof. Tanjim Rahman" },
-      { id: "director_research", title: "Director, Research & Publications", name: "Dr. Mahbub Karim" },
-      { id: "director_admission", title: "Director, Admissions", name: "Sabina Yasmin" },
+      { id: "dean_arts", title: "ডিন, কলা অনুষদ", name: "প্রফেসর শবনম জাহান" },
+      { id: "dean_science", title: "ডিন, বিজ্ঞান অনুষদ", name: "প্রফেসর তানজিম রহমান" },
+      { id: "director_research", title: "পরিচালক, গবেষণা ও প্রকাশনা", name: "ডাঃ মাহবুব করিম" },
+      { id: "director_admission", title: "পরিচালক, ভর্তি", name: "সাবিনা ইয়াসমিন" },
     ],
   },
   {
     id: "student_services",
-    title: "Student Services",
-    desc: "Discipline, welfare, counseling and student experience",
+    title: "ছাত্র-ছাত্রী সেবা",
+    desc: "শৃঙ্খলা, কল্যাণ, কাউন্সেলিং ও শিক্ষার্থীর অভিজ্ঞতা",
     roles: [
-      { id: "proctor", title: "Chief Proctor", name: "Lt. Col. (R) Arif Hossain" },
-      { id: "student_affairs", title: "Director, Student Affairs", name: "Mst. Nargis Akter" },
-      { id: "counseling", title: "Head, Counseling & Career", name: "Md. Naimul Islam" },
-      { id: "librarian", title: "University Librarian", name: "Tahmina Sultana" },
+      { id: "proctor", title: "প্রধান প্রোক্টর", name: "লে. কর্নেল (অবঃ) আরিফ হোসেন" },
+      { id: "student_affairs", title: "পরিচালক, ছাত্রকল্যাণ", name: "মোছাঃ নার্গিস আক্তার" },
+      { id: "counseling", title: "প্রধান, কাউন্সেলিং ও ক্যারিয়ার", name: "মোঃ নাঈমুল ইসলাম" },
+      { id: "librarian", title: "লাইব্রেরিয়ান", name: "তাহমিনা সুলতানা" },
     ],
   },
   {
     id: "administration",
-    title: "Administration & Operations",
-    desc: "Finance, HR, procurement and campus operations",
+    title: "প্রশাসন ও অপারেশন্স",
+    desc: "অর্থ, মানবসম্পদ, ক্রয় ও ক্যাম্পাস পরিচালনা",
     roles: [
-      { id: "bursar", title: "Bursar (Finance Head)", name: "Md. Rezaul Karim" },
-      { id: "accounts_head", title: "Head of Accounts", name: "Saidur Rahman" },
-      { id: "hr_head", title: "Head of Human Resources", name: "Nadia Chowdhury" },
-      { id: "it_director", title: "Director, IT Services", name: "Engr. Imran Hossain" },
+      { id: "bursar", title: "বার্সার (অর্থ প্রধান)", name: "মোঃ রেজাউল করিম" },
+      { id: "accounts_head", title: "হিসাব শাখার প্রধান", name: "সাইদুর রহমান" },
+      { id: "hr_head", title: "মানবসম্পদ প্রধান", name: "নাদিয়া চৌধুরী" },
+      { id: "it_director", title: "পরিচালক, আইটি সেবা", name: "ইঞ্জি. ইমরান হোসেন" },
     ],
   },
 ];
 
 const allRolesFlat = SECTIONS.flatMap(s => s.roles.map(r => ({ ...r, sectionId: s.id, sectionTitle: s.title })));
 
-export default function MainOfficePage() {
+export default function MainOfficePageBn() {
   const [q, setQ] = useState("");
   const [activeSection, setActiveSection] = useState("all");
 
@@ -75,15 +75,15 @@ export default function MainOfficePage() {
               <Building2 className="h-5 w-5" />
             </div>
             <div>
-              <h1 className="text-xl font-semibold tracking-tight">Main Office</h1>
-              <p className="text-xs text-slate-500">University Administration Directory</p>
+              <h1 className="text-xl font-semibold tracking-tight">প্রধান অফিস</h1>
+              <p className="text-xs text-slate-500">বিশ্ববিদ্যালয় প্রশাসনের ডিরেক্টরি</p>
             </div>
           </div>
           <a
             href="/dashboard"
             className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition hover:shadow-md"
           >
-            Go to Dashboard <ChevronRight className="h-4 w-4" />
+            ড্যাশবোর্ডে যান <ChevronRight className="h-4 w-4" />
           </a>
         </div>
       </header>
@@ -93,8 +93,8 @@ export default function MainOfficePage() {
         <div className="mx-auto max-w-7xl px-4 py-8">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <h2 className="text-lg font-semibold tracking-tight">Administration</h2>
-              <p className="text-sm text-slate-500">Browse by office or search by name/title</p>
+              <h2 className="text-lg font-semibold tracking-tight">প্রশাসনিক তালিকা</h2>
+              <p className="text-sm text-slate-500">সেকশন বাছাই করুন বা নাম/পদবি দিয়ে খুঁজুন</p>
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row">
@@ -102,7 +102,7 @@ export default function MainOfficePage() {
                 <input
                   value={q}
                   onChange={(e) => setQ(e.target.value)}
-                  placeholder="Search name or title..."
+                  placeholder="নাম বা পদবি দিয়ে খুঁজুন..."
                   className="w-72 rounded-xl border border-slate-300 bg-white pl-10 pr-3 py-2.5 text-sm shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-100"
                 />
                 <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
@@ -114,7 +114,7 @@ export default function MainOfficePage() {
                   onChange={(e) => setActiveSection(e.target.value)}
                   className="w-56 appearance-none rounded-xl border border-slate-300 bg-white px-4 py-2.5 pr-10 text-sm shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-100"
                 >
-                  <option value="all">All Sections</option>
+                  <option value="all">সব সেকশন</option>
                   {SECTIONS.map(s => (
                     <option key={s.id} value={s.id}>{s.title}</option>
                   ))}
@@ -129,7 +129,6 @@ export default function MainOfficePage() {
       {/* Big Cards Grid */}
       <section>
         <div className="mx-auto max-w-7xl px-4 pb-14">
-          {/* Section Blocks */}
           {SECTIONS.filter(sec => activeSection === "all" || sec.id === activeSection).map((sec, sIdx) => (
             <div key={sec.id} className="mb-10">
               <div className="mb-4 flex items-end justify-between">
@@ -137,7 +136,7 @@ export default function MainOfficePage() {
                   <h3 className="text-base font-semibold tracking-tight">{sec.title}</h3>
                   <p className="text-sm text-slate-500">{sec.desc}</p>
                 </div>
-                <div className="text-xs text-slate-500">{sec.roles.length} roles</div>
+                <div className="text-xs text-slate-500">{sec.roles.length} জন</div>
               </div>
 
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -160,23 +159,22 @@ export default function MainOfficePage() {
                           <p className="text-sm text-slate-600">{role.title}</p>
                           <div className="mt-3 flex flex-wrap gap-2 text-xs text-slate-500">
                             <span className="rounded-full border border-slate-200 bg-slate-50 px-2 py-1">{sec.title}</span>
-                            <span className="rounded-full border border-indigo-200 bg-indigo-50 px-2 py-1">Office</span>
+                            <span className="rounded-full border border-indigo-200 bg-indigo-50 px-2 py-1">অফিস</span>
                           </div>
                         </div>
                       </div>
 
-                      {/* Meta/CTA Row */}
                       <div className="mt-6 flex items-center justify-between">
                         <div className="flex items-center gap-4 text-xs text-slate-500">
-                          <div className="flex items-center gap-1"><Users className="h-3.5 w-3.5" /> Team</div>
+                          <div className="flex items-center gap-1"><Users className="h-3.5 w-3.5" /> টিম</div>
                           <div className="hidden sm:block">•</div>
-                          <div>Available 9:00–17:00</div>
+                          <div>সময়: ৯:০০–১৭:০০</div>
                         </div>
                         <a
                           href="#"
                           className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium shadow-sm transition hover:shadow-md"
                         >
-                          View Profile <ChevronRight className="h-3.5 w-3.5" />
+                          বিস্তারিত দেখুন <ChevronRight className="h-3.5 w-3.5" />
                         </a>
                       </div>
                     </motion.div>
@@ -184,7 +182,7 @@ export default function MainOfficePage() {
 
                 {(sec.roles.filter(r => !q || r.name.toLowerCase().includes(q.toLowerCase()) || r.title.toLowerCase().includes(q.toLowerCase())).length === 0) && (
                   <div className="col-span-full rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-8 text-center text-sm text-slate-600">
-                    No matching roles in this section.
+                    এই সেকশনে মিল পাওয়া যায়নি।
                   </div>
                 )}
               </div>
@@ -196,7 +194,7 @@ export default function MainOfficePage() {
       {/* Footer */}
       <footer className="border-t border-slate-200 bg-white/70">
         <div className="mx-auto max-w-7xl px-4 py-6 text-center text-xs text-slate-500">
-          © {new Date().getFullYear()} Your University — Main Office
+          © {new Date().getFullYear()} আপনার বিশ্ববিদ্যালয় — প্রধান অফিস
         </div>
       </footer>
     </div>

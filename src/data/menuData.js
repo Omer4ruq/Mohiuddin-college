@@ -383,15 +383,15 @@ const menuData = [
         items: [
           {
             title: "Science",
-            link: "/",
+            link: "/faculty/12th-grade/science",
           },
           {
             title: "Business Studies",
-            link: "/",
+            link: "/faculty/12th-grade/business-studies",
           },
           {
             title: "Humanities",
-            link: "/",
+            link: "/faculty/12th-grade/humanities",
           },
         ],
       },
@@ -400,11 +400,11 @@ const menuData = [
         items: [
           {
             title: "BSS",
-            link: "/",
+            link: "/faculty/bss/humanities",
           },
           {
             title: "BA",
-            link: "/",
+            link: "/faculty/bss/science",
           },
         ],
       },
@@ -413,11 +413,11 @@ const menuData = [
         items: [
           {
             title: "BSS",
-            link: "/",
+            link: "/faculty/11th-grade/humanities",
           },
           {
             title: "BA",
-            link: "/",
+            link: "/faculty/11th-grade/science",
           },
         ],
       },
@@ -426,11 +426,11 @@ const menuData = [
         items: [
           {
             title: "BSS",
-            link: "/",
+            link: "/faculty/11th-grade/science",
           },
           {
             title: "BA",
-            link: "/",
+            link: "/faculty/11th-grade/humanities",
           },
         ],
       },
